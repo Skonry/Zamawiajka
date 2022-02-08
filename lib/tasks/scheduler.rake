@@ -20,7 +20,6 @@ task :scrap do
     channel: 'webhooks',
     attachments: [
       {
-        pretext: "Nocne hakowanie",
         text: "Wybierz drugie danie",
         actions: [
           {
@@ -32,7 +31,7 @@ task :scrap do
                 action: "do_something"
               }
             },
-            type: "select",
+            type: "radio",
             options: main_dishes.map { |dish| { text: dish, value: dish } }
           }
         ]
